@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.SharePoint.Client;
 using SignatureApp.Web.Models;
 using SignatureApp.Web.Services;
 
@@ -16,7 +15,7 @@ namespace SignatureApp.Web.Controllers
             _signatureService = signatureService;
         }
 
-        [HttpGet]
+        [HttpGet("welcome")]
         public string GetWelcomeMessage()
         {
             return "Welcome";
