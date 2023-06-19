@@ -16,6 +16,12 @@ namespace SignatureApp.Web.Controllers
             _signatureService = signatureService;
         }
 
+        [HttpGet]
+        public string GetWelcomeMessage()
+        {
+            return "Welcome";
+        }
+
         [HttpPost("save")]
         public async Task<bool> SaveSignatureData([FromBody] SignatureDto dto)
         {
