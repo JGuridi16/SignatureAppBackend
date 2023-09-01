@@ -30,7 +30,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(builder =>
 {
-    builder.WithOrigins(appSettings.AllowedOrigins)
+    //builder.WithOrigins(appSettings.AllowedOrigins)
+    builder.AllowAnyOrigin()
            .AllowAnyMethod()
            .AllowAnyHeader();
 });
