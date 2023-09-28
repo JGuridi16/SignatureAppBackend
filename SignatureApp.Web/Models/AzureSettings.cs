@@ -10,6 +10,7 @@ namespace SignatureApp.Web.Models
         public string Scope { get; set; } = string.Empty;
         public string TenantName { get; set; } = string.Empty;
         public string SiteName { get; set; } = string.Empty;
+        public string DriveName { get; set; } = string.Empty;
         public string ListName { get; set; } = string.Empty;
     }
 }

@@ -22,7 +22,7 @@ namespace SignatureApp.Web.Controllers
         }
 
         [HttpPost("save")]
-        public async Task<bool> SaveSignatureData([FromBody] SignatureDto dto)
+        public async Task<bool> SaveSignatureData([FromForm] SignatureDto dto)
         {
             return await _signatureService.SaveSignatureDataIntoSharePoint(dto);
         }

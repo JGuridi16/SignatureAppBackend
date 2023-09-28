@@ -18,6 +18,14 @@ namespace SignatureApp.Web.Models
         public DateTime ExpirationDate { get; set; }
         public int SecurityCode { get; set; }
         public int ZipCode { get; set; }
+        [JsonIgnore]
+        public IFormFile? IdentificationPhoto { get; set; }
+        [JsonIgnore]
+        public IFormFile? CardInfoImage { get; set; }
+        [JsonProperty("IdentificationPhoto")]
+        public string? IdentificationPhotoSerialized { get; set; }
+        [JsonProperty("CardInfoImage")]
+        public string? CardInfoImageSerialized { get; set; }
     }
 
     public class SignatureRoot
