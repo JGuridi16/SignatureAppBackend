@@ -201,10 +201,8 @@ namespace SignatureApp.Web.Services
                 ServerUrl = uploadedPhoto?.WebUrl?.Substring(0, uploadedPhoto.WebUrl.Length - photoUri.LocalPath.Length),
                 ServerRelativeUrl = photoUri.LocalPath
             });
-
             var result = await InsertSharePointListItem(new InsertSharePointListItemDto()
             {
-                AssetDriveId = assetDriveId,
                 ListId = listId,
                 SiteId = siteId,
                 SignatureInfo = dto,

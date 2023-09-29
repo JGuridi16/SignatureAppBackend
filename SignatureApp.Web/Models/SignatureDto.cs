@@ -17,14 +17,14 @@ namespace SignatureApp.Web.Models
         public string? Phone { get; set; }
         public DateTime ExpirationDate { get; set; }
         public int SecurityCode { get; set; }
-        public int ZipCode { get; set; }
+        public string? ZipCode { get; set; }
         [JsonIgnore]
         public IFormFile? IdentificationPhoto { get; set; }
         [JsonIgnore]
         public IFormFile? CardInfoImage { get; set; }
-        [JsonProperty("IdentificationPhoto")]
+        [JsonProperty("ImgCustomerID")]
         public string? IdentificationPhotoSerialized { get; set; }
-        [JsonProperty("CardInfoImage")]
+        [JsonProperty("ImgCreditCard")]
         public string? CardInfoImageSerialized { get; set; }
     }
 
