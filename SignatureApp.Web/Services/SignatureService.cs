@@ -133,7 +133,8 @@ namespace SignatureApp.Web.Services
 
         private async Task<DriveItemDto?> UploadSharePointAssetDriveAsync(UploadSharePointFileDto dto)
         {
-            var filename = $"{Guid.NewGuid()}_{dto.File?.FileName}";
+            var fileExtension = Path.GetExtension(dto.File?.FileName);
+            var filename = $"{Guid.NewGuid()}{fileExtension}";
             var insertDriveItemUrl = _appSettings.SiteInsertDriveItemEndpoint?
                 .Replace("{{AssetDriveId}}", dto.AssetDriveId)
                 .Replace("{{ListId}}", dto.ListId)

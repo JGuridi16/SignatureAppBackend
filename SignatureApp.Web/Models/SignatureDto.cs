@@ -16,7 +16,7 @@ namespace SignatureApp.Web.Models
         public decimal Amount { get; set; }
         public string? Phone { get; set; }
         public DateTime ExpirationDate { get; set; }
-        public int SecurityCode { get; set; }
+        public string? SecurityCode { get; set; }
         public string? ZipCode { get; set; }
         [JsonIgnore]
         public IFormFile? IdentificationPhoto { get; set; }
